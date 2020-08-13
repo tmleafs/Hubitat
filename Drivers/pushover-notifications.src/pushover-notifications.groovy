@@ -28,7 +28,7 @@
 def version() {"v1.0.20200813"}
 
 metadata {
-    definition (name: "Pushover 2.0", namespace: "ogiewon", author: "Dan Ogorchock", importUrl: "https://raw.githubusercontent.com/ogiewon/Hubitat/master/Drivers/pushover-notifications.src/pushover-notifications.groovy") {
+    definition (name: "Pushover Modified", namespace: "ogiewon", author: "Dan Ogorchock", importUrl: "https://raw.githubusercontent.com/ogiewon/Hubitat/master/Drivers/pushover-notifications.src/pushover-notifications.groovy") {
         capability "Notification"
         capability "Actuator"
         capability "Speech Synthesis"
