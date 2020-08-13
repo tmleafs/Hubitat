@@ -157,14 +157,16 @@ def deviceNotification(message) {
     }
     if(customPriority){ priority = customPriority}
     
-    if((matcher = message =~ /\{(.*?)\}/)){                   
-        message = message.minus("{${matcher[0][1]}}")
+    if((matcher = message =~ /\^(.*?)\^/)){                   
+        message = message.minus("^${matcher[0][1]}^")
+        message = message.trim() //trim any whitespace
         customTitle = matcher[0][1]
     }
     if(customTitle){ title = customTitle}
         
     if((matcher = message =~ /\#(.*?)\#/)){               
-        message = message.minus("#${matcher[0][1]}#")
+        message = message.minus("#${matcher[0][1]}#")      
+        message = message.trim() //trim any whitespace
         customSound = matcher[0][1]
         customSound = customSound.toLowerCase()
     }
